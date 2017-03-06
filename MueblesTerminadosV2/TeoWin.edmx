@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TeoWinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tpresupuesto">
+          <Key>
+            <PropertyRef Name="codigo" />
+            <PropertyRef Name="empresa" />
+          </Key>
+          <Property Name="codigo" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="zonaCliente" Type="varchar" MaxLength="2" />
+          <Property Name="codigoCliente" Type="int" />
+          <Property Name="observaciones" Type="varchar" MaxLength="50" />
+          <Property Name="fechaAlbaran" Type="datetime" />
+          <Property Name="codigoAlbaran" Type="varchar" MaxLength="25" />
+          <Property Name="fechaFactura" Type="datetime" />
+          <Property Name="codigoFactura" Type="varchar" MaxLength="10" />
+          <Property Name="fechaAlta" Type="datetime" />
+          <Property Name="coste" Type="float" />
+          <Property Name="bruto" Type="float" />
+          <Property Name="baseImponible" Type="float" />
+          <Property Name="total" Type="float" />
+          <Property Name="fechaAceptado" Type="datetime" />
+          <Property Name="fechaCaducidad" Type="datetime" />
+          <Property Name="fechaPedidoCliente" Type="datetime" />
+          <Property Name="codigoPedidoCliente" Type="varchar" MaxLength="25" />
+          <Property Name="forma_pago" Type="varchar" MaxLength="5" />
+          <Property Name="tarifa" Type="tinyint" />
+          <Property Name="codigoModelo" Type="varchar" MaxLength="10" />
+          <Property Name="tipoAplicacion" Type="tinyint" />
+          <Property Name="codigoAgente" Type="int" />
+          <Property Name="zonaAgente" Type="varchar" MaxLength="2" />
+          <Property Name="aviso" Type="varchar" MaxLength="255" />
+          <Property Name="obra" Type="varchar" MaxLength="50" />
+          <Property Name="comision" Type="float" />
+          <Property Name="observaciones2" Type="text" />
+          <Property Name="referencia" Type="varchar" MaxLength="30" />
+          <Property Name="operador" Type="int" />
+          <Property Name="dtoPP" Type="float" />
+          <Property Name="recargoFinanciacion" Type="float" />
+          <Property Name="valorPunto" Type="float" />
+          <Property Name="ordenOptimizacion" Type="int" />
+          <Property Name="ordenEnOptimizacion" Type="int" />
+          <Property Name="empresa" Type="int" Nullable="false" />
+          <Property Name="volumen" Type="float" />
+          <Property Name="brutoSinDescuento" Type="float" />
+          <Property Name="kg" Type="float" />
+          <Property Name="numeroBultos" Type="float" />
+          <Property Name="idArquitecto" Type="int" />
+          <Property Name="costeAnadido" Type="float" />
+          <Property Name="version" Type="tinyint" />
+          <Property Name="versionContraPresupuesto" Type="tinyint" />
+          <Property Name="fechaAnulacion" Type="datetime" />
+          <Property Name="brutoConDtoPartida" Type="float" />
+          <Property Name="dtoGlobal" Type="float" />
+          <Property Name="fechaEntrega" Type="datetime" />
+          <Property Name="moneda" Type="int" />
+          <Property Name="cambio" Type="float" />
+          <Property Name="porcentajeRecorte" Type="float" />
+          <Property Name="idObra" Type="int" />
+          <Property Name="modeloAnterior" Type="varchar" MaxLength="10" />
+          <Property Name="idClienteVarios" Type="int" />
+          <Property Name="transportista" Type="varchar" MaxLength="2" />
+          <Property Name="medioTransporte" Type="tinyint" />
+          <Property Name="impPorte" Type="float" />
+          <Property Name="codigoPedidoProveedor" Type="varchar" MaxLength="10" />
+          <Property Name="numeroBultos1" Type="float" />
+          <Property Name="numeroBultos2" Type="float" />
+          <Property Name="cartaPresentacion" Type="varchar" MaxLength="20" />
+          <Property Name="pieAdjunto" Type="varchar" MaxLength="10" />
+          <Property Name="porcentajeIncremento" Type="float" />
+          <Property Name="totalIncremento" Type="float" />
+          <Property Name="fechaSolicitud" Type="datetime" />
+          <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="tipoObra" Type="tinyint" />
+          <Property Name="siTimbre" Type="bit" />
+          <Property Name="confirmado" Type="bit" />
+          <Property Name="sucursal" Type="varchar" MaxLength="3" />
+          <Property Name="idDireccionEnvio" Type="int" />
+          <Property Name="idDireccionEnvioFra" Type="int" />
+          <Property Name="idDireccionCobro" Type="int" />
+          <Property Name="codigoCausal" Type="varchar" MaxLength="10" />
+          <Property Name="codigoVigencia" Type="int" />
+          <Property Name="dtoGlobal2" Type="float" />
+          <Property Name="idCatalogo" Type="int" Nullable="false" />
+          <Property Name="siOrigenObra" Type="int" />
+          <Property Name="tipoManoObra" Type="varchar" MaxLength="5" />
+          <Property Name="porcentajeRecorte2" Type="float" />
+          <Property Name="porcenACosteParaVenta" Type="float" />
+          <Property Name="porcenACosteParaVenta2" Type="float" />
+          <Property Name="tipoIncosur1" Type="varchar" MaxLength="5" />
+          <Property Name="tipoIncosur2" Type="varchar" MaxLength="5" />
+          <Property Name="codigoRechazo" Type="varchar" MaxLength="10" />
+          <Property Name="tipo" Type="int" />
+          <Property Name="siAgruparHerrajePorLinea" Type="bit" />
+          <Property Name="siETeowin" Type="bit" />
+          <Property Name="fechaConfirmacion" Type="datetime" />
+          <Property Name="prioridad" Type="tinyint" />
+          <Property Name="siMontaje" Type="bit" />
+          <Property Name="porcenCargoMontaje" Type="float" />
+          <Property Name="cargoMinimoMontaje" Type="float" />
+          <Property Name="importeMontaje" Type="float" />
+          <Property Name="usuarioAsignado" Type="int" />
+          <Property Name="fechaAsignado" Type="datetime" />
+          <Property Name="siPerdido" Type="bit" />
+          <Property Name="motivoPerdida" Type="varchar" MaxLength="150" />
+          <Property Name="estado" Type="tinyint" />
+          <Property Name="usuarioAceptadoDiseno" Type="int" />
+          <Property Name="fechaAceptadoDiseno" Type="datetime" />
+          <Property Name="usuarioAceptadoPresup" Type="int" />
+          <Property Name="usuarioAceptadoFabricacion" Type="int" />
+          <Property Name="fechaAceptadoFabricacion" Type="datetime" />
+          <Property Name="fechaCaducidadAsignacion" Type="datetime" />
+          <Property Name="departamentoAsignado" Type="varchar" MaxLength="4" />
+          <Property Name="measureUpDate" Type="smalldatetime" />
+          <Property Name="installDate" Type="smalldatetime" />
+          <Property Name="ripOutRequired" Type="bit" />
+          <Property Name="plumbingElectrical" Type="int" />
+          <Property Name="fitter" Type="varchar" MaxLength="50" />
+          <Property Name="tap" Type="varchar" MaxLength="255" />
+          <Property Name="sink" Type="varchar" MaxLength="255" />
+          <Property Name="handle" Type="bit" />
+          <Property Name="importeVariaciones" Type="float" />
+          <Property Name="respetarTotalPresupuesto" Type="bit" />
+          <Property Name="siRespetarComision" Type="bit" />
+          <Property Name="siVersionActiva" Type="bit" />
+          <Property Name="specialConditions" Type="varchar" MaxLength="255" />
+          <Property Name="contractSignatureDate" Type="smalldatetime" />
+          <Property Name="variations" Type="float" />
+          <Property Name="plumbing" Type="float" />
+          <Property Name="carpentry" Type="float" />
+          <Property Name="electrical" Type="float" />
+          <Property Name="floorPolishing" Type="float" />
+          <Property Name="painters" Type="float" />
+          <Property Name="plastering" Type="float" />
+          <Property Name="tiling" Type="float" />
+          <Property Name="additionalItemAmount" Type="float" />
+          <Property Name="additionalItem" Type="varchar" MaxLength="50" />
+          <Property Name="actualPaymentDeposit" Type="float" />
+          <Property Name="actualPaymentPreInstallation" Type="float" />
+          <Property Name="actualPaymentPracticalCompletion" Type="float" />
+          <Property Name="ordenCompra" Type="int" />
+          <Property Name="BSA" Type="float" />
+          <Property Name="fechaMontaje" Type="varchar" MaxLength="10" />
+          <Property Name="horaMontaje" Type="varchar" MaxLength="10" />
+          <Property Name="montador" Type="int" />
+          <Property Name="fechaMedicion" Type="varchar" MaxLength="10" />
+          <Property Name="horaMedicion" Type="varchar" MaxLength="10" />
+          <Property Name="medidor" Type="int" />
+          <Property Name="hotplate" Type="varchar" MaxLength="25" />
+          <Property Name="oven" Type="varchar" MaxLength="25" />
+          <Property Name="microwave" Type="varchar" MaxLength="25" />
+          <Property Name="dishwasher" Type="varchar" MaxLength="25" />
+          <Property Name="fridge" Type="varchar" MaxLength="25" />
+          <Property Name="headerTreatment" Type="tinyint" />
+          <Property Name="splashbackToBeMesaured" Type="tinyint" />
+          <Property Name="sinks_basins" Type="tinyint" />
+          <Property Name="usuarioAceptadoIngenieria" Type="int" />
+          <Property Name="fechaAceptadoIngenieria" Type="datetime" />
+          <Property Name="nomBDCopia" Type="varchar" MaxLength="25" />
+          <Property Name="porcentajeCosteIndirecto" Type="float" />
+          <Property Name="tipoPresupuesto" Type="int" />
+          <Property Name="materialLabour" Type="varchar" MaxLength="8" />
+          <Property Name="CustomerOrder" Type="varchar" MaxLength="25" />
+          <Property Name="rangehood" Type="varchar" MaxLength="25" />
+          <Property Name="specialConditions2" Type="varchar" MaxLength="255" />
+          <Property Name="bloqueadoOtraSede" Type="int" />
+          <Property Name="fechaEntregaReal" Type="datetime" />
+          <Property Name="importeUF" Type="float" />
+          <Property Name="codigoPedidoTobisa" Type="varchar" MaxLength="25" />
+          <Property Name="IVA" Type="float" />
+          <Property Name="zonaClientePago1" Type="varchar" MaxLength="2" />
+          <Property Name="codigoClientePago1" Type="int" />
+          <Property Name="codigoFacturaPago1" Type="varchar" MaxLength="16" />
+          <Property Name="zonaClientePago2" Type="varchar" MaxLength="2" />
+          <Property Name="codigoClientePago2" Type="int" />
+          <Property Name="codigoFacturaPago2" Type="varchar" MaxLength="16" />
+          <Property Name="zonaClientePago3" Type="varchar" MaxLength="2" />
+          <Property Name="codigoClientePago3" Type="int" />
+          <Property Name="codigoFacturaPago3" Type="varchar" MaxLength="16" />
+          <Property Name="origen" Type="int" />
+          <Property Name="noIncluirMontaje" Type="bit" />
+          <Property Name="pieAdjuntoModificado" Type="text" />
+          <Property Name="tipoClasificacion" Type="varchar" MaxLength="20" />
+          <Property Name="importeInstalacion" Type="float" />
+          <Property Name="siTeoWEB" Type="bit" />
+          <Property Name="administracion" Type="int" />
+          <Property Name="imprevistos" Type="int" />
+          <Property Name="utilidad" Type="int" />
+          <Property Name="siAIU" Type="bit" />
+          <Property Name="ivaAiu" Type="float" />
+          <Property Name="factorAiu" Type="float" />
+          <Property Name="motivoVariacion" Type="varchar" MaxLength="5" />
+          <Property Name="observacionVariacion" Type="varchar" MaxLength="200" />
+          <Property Name="presupuestoPadre" Type="varchar" MaxLength="25" />
+          <Property Name="soyVariacion" Type="bit" />
+          <Property Name="comentarioFechaEstimada" Type="varchar" MaxLength="100" />
+          <Property Name="estadoVariacion" Type="int" />
+          <Property Name="motivoCancelacionVariacion" Type="varchar" MaxLength="100" />
+          <Property Name="materialLento" Type="varchar" MaxLength="50" />
+          <Property Name="projectQty" Type="int" />
+          <Property Name="importeFijoCliente" Type="float" />
+          <Property Name="EcoMobilierSometido" Type="bit" Nullable="false" />
+          <Property Name="EcoParticipationSometido" Type="bit" Nullable="false" />
+          <Property Name="TFASometido" Type="bit" Nullable="false" />
+          <Property Name="TVASometido" Type="bit" Nullable="false" />
+          <Property Name="tipoProyecto" Type="varchar" MaxLength="5" />
+          <Property Name="codigoPorte" Type="varchar" MaxLength="5" />
+          <Property Name="importeMinimoFranco" Type="float" />
+          <Property Name="dtoPortes" Type="float" />
+          <Property Name="codDescripcionDTO1" Type="varchar" MaxLength="5" />
+          <Property Name="codDescripcionDTO2" Type="varchar" MaxLength="5" />
+          <Property Name="actualizarPDF" Type="bit" />
+          <Property Name="autoAceptar" Type="bit" />
+          <Property Name="Bloqueos" Type="int" Nullable="false" />
+          <Property Name="Estados" Type="int" Nullable="false" />
+          <Property Name="fechaEntregaDeseada" Type="datetime" />
+          <Property Name="fechaExpedicion" Type="datetime" />
+          <Property Name="idLineaProduccion" Type="int" />
+          <Property Name="reenviarMail" Type="bit" />
+          <Property Name="semanaEntrega" Type="int" />
+          <Property Name="idZonaEnvio" Type="int" />
+          <Property Name="anoTournee" Type="varchar" MaxLength="2" />
+          <Property Name="contadorTournee" Type="varchar" MaxLength="5" />
+          <Property Name="idZonaEnvioTournee" Type="int" />
+          <Property Name="tipoOrigen" Type="int" />
+          <Property Name="siAnulado" Type="bit" />
+          <Property Name="observacionesAnulado" Type="varchar" MaxLength="255" />
+          <Property Name="codeReglement" Type="varchar" MaxLength="20" />
+          <Property Name="codeConditionPaiement" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="TeoWinModelStoreContainer">
+          <EntitySet Name="tpresupuesto" EntityType="Self.tpresupuesto" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TeoWinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tpresupuesto">
+          <Key>
+            <PropertyRef Name="codigo" />
+            <PropertyRef Name="empresa" />
+          </Key>
+          <Property Name="codigo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="zonaCliente" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="codigoCliente" Type="Int32" />
+          <Property Name="observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaAlbaran" Type="DateTime" Precision="3" />
+          <Property Name="codigoAlbaran" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="fechaFactura" Type="DateTime" Precision="3" />
+          <Property Name="codigoFactura" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="fechaAlta" Type="DateTime" Precision="3" />
+          <Property Name="coste" Type="Double" />
+          <Property Name="bruto" Type="Double" />
+          <Property Name="baseImponible" Type="Double" />
+          <Property Name="total" Type="Double" />
+          <Property Name="fechaAceptado" Type="DateTime" Precision="3" />
+          <Property Name="fechaCaducidad" Type="DateTime" Precision="3" />
+          <Property Name="fechaPedidoCliente" Type="DateTime" Precision="3" />
+          <Property Name="codigoPedidoCliente" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="forma_pago" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="tarifa" Type="Byte" />
+          <Property Name="codigoModelo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tipoAplicacion" Type="Byte" />
+          <Property Name="codigoAgente" Type="Int32" />
+          <Property Name="zonaAgente" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="aviso" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="obra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="comision" Type="Double" />
+          <Property Name="observaciones2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="referencia" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="operador" Type="Int32" />
+          <Property Name="dtoPP" Type="Double" />
+          <Property Name="recargoFinanciacion" Type="Double" />
+          <Property Name="valorPunto" Type="Double" />
+          <Property Name="ordenOptimizacion" Type="Int32" />
+          <Property Name="ordenEnOptimizacion" Type="Int32" />
+          <Property Name="empresa" Type="Int32" Nullable="false" />
+          <Property Name="volumen" Type="Double" />
+          <Property Name="brutoSinDescuento" Type="Double" />
+          <Property Name="kg" Type="Double" />
+          <Property Name="numeroBultos" Type="Double" />
+          <Property Name="idArquitecto" Type="Int32" />
+          <Property Name="costeAnadido" Type="Double" />
+          <Property Name="version" Type="Byte" />
+          <Property Name="versionContraPresupuesto" Type="Byte" />
+          <Property Name="fechaAnulacion" Type="DateTime" Precision="3" />
+          <Property Name="brutoConDtoPartida" Type="Double" />
+          <Property Name="dtoGlobal" Type="Double" />
+          <Property Name="fechaEntrega" Type="DateTime" Precision="3" />
+          <Property Name="moneda" Type="Int32" />
+          <Property Name="cambio" Type="Double" />
+          <Property Name="porcentajeRecorte" Type="Double" />
+          <Property Name="idObra" Type="Int32" />
+          <Property Name="modeloAnterior" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="idClienteVarios" Type="Int32" />
+          <Property Name="transportista" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="medioTransporte" Type="Byte" />
+          <Property Name="impPorte" Type="Double" />
+          <Property Name="codigoPedidoProveedor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="numeroBultos1" Type="Double" />
+          <Property Name="numeroBultos2" Type="Double" />
+          <Property Name="cartaPresentacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pieAdjunto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="porcentajeIncremento" Type="Double" />
+          <Property Name="totalIncremento" Type="Double" />
+          <Property Name="fechaSolicitud" Type="DateTime" Precision="3" />
+          <Property Name="upsize_ts" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="tipoObra" Type="Byte" />
+          <Property Name="siTimbre" Type="Boolean" />
+          <Property Name="confirmado" Type="Boolean" />
+          <Property Name="sucursal" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="idDireccionEnvio" Type="Int32" />
+          <Property Name="idDireccionEnvioFra" Type="Int32" />
+          <Property Name="idDireccionCobro" Type="Int32" />
+          <Property Name="codigoCausal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="codigoVigencia" Type="Int32" />
+          <Property Name="dtoGlobal2" Type="Double" />
+          <Property Name="idCatalogo" Type="Int32" Nullable="false" />
+          <Property Name="siOrigenObra" Type="Int32" />
+          <Property Name="tipoManoObra" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="porcentajeRecorte2" Type="Double" />
+          <Property Name="porcenACosteParaVenta" Type="Double" />
+          <Property Name="porcenACosteParaVenta2" Type="Double" />
+          <Property Name="tipoIncosur1" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="tipoIncosur2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="codigoRechazo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tipo" Type="Int32" />
+          <Property Name="siAgruparHerrajePorLinea" Type="Boolean" />
+          <Property Name="siETeowin" Type="Boolean" />
+          <Property Name="fechaConfirmacion" Type="DateTime" Precision="3" />
+          <Property Name="prioridad" Type="Byte" />
+          <Property Name="siMontaje" Type="Boolean" />
+          <Property Name="porcenCargoMontaje" Type="Double" />
+          <Property Name="cargoMinimoMontaje" Type="Double" />
+          <Property Name="importeMontaje" Type="Double" />
+          <Property Name="usuarioAsignado" Type="Int32" />
+          <Property Name="fechaAsignado" Type="DateTime" Precision="3" />
+          <Property Name="siPerdido" Type="Boolean" />
+          <Property Name="motivoPerdida" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="Byte" />
+          <Property Name="usuarioAceptadoDiseno" Type="Int32" />
+          <Property Name="fechaAceptadoDiseno" Type="DateTime" Precision="3" />
+          <Property Name="usuarioAceptadoPresup" Type="Int32" />
+          <Property Name="usuarioAceptadoFabricacion" Type="Int32" />
+          <Property Name="fechaAceptadoFabricacion" Type="DateTime" Precision="3" />
+          <Property Name="fechaCaducidadAsignacion" Type="DateTime" Precision="3" />
+          <Property Name="departamentoAsignado" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="measureUpDate" Type="DateTime" Precision="0" />
+          <Property Name="installDate" Type="DateTime" Precision="0" />
+          <Property Name="ripOutRequired" Type="Boolean" />
+          <Property Name="plumbingElectrical" Type="Int32" />
+          <Property Name="fitter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tap" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="sink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="handle" Type="Boolean" />
+          <Property Name="importeVariaciones" Type="Double" />
+          <Property Name="respetarTotalPresupuesto" Type="Boolean" />
+          <Property Name="siRespetarComision" Type="Boolean" />
+          <Property Name="siVersionActiva" Type="Boolean" />
+          <Property Name="specialConditions" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="contractSignatureDate" Type="DateTime" Precision="0" />
+          <Property Name="variations" Type="Double" />
+          <Property Name="plumbing" Type="Double" />
+          <Property Name="carpentry" Type="Double" />
+          <Property Name="electrical" Type="Double" />
+          <Property Name="floorPolishing" Type="Double" />
+          <Property Name="painters" Type="Double" />
+          <Property Name="plastering" Type="Double" />
+          <Property Name="tiling" Type="Double" />
+          <Property Name="additionalItemAmount" Type="Double" />
+          <Property Name="additionalItem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="actualPaymentDeposit" Type="Double" />
+          <Property Name="actualPaymentPreInstallation" Type="Double" />
+          <Property Name="actualPaymentPracticalCompletion" Type="Double" />
+          <Property Name="ordenCompra" Type="Int32" />
+          <Property Name="BSA" Type="Double" />
+          <Property Name="fechaMontaje" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="horaMontaje" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="montador" Type="Int32" />
+          <Property Name="fechaMedicion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="horaMedicion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="medidor" Type="Int32" />
+          <Property Name="hotplate" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="oven" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="microwave" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="dishwasher" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="fridge" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="headerTreatment" Type="Byte" />
+          <Property Name="splashbackToBeMesaured" Type="Byte" />
+          <Property Name="sinks_basins" Type="Byte" />
+          <Property Name="usuarioAceptadoIngenieria" Type="Int32" />
+          <Property Name="fechaAceptadoIngenieria" Type="DateTime" Precision="3" />
+          <Property Name="nomBDCopia" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="porcentajeCosteIndirecto" Type="Double" />
+          <Property Name="tipoPresupuesto" Type="Int32" />
+          <Property Name="materialLabour" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerOrder" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="rangehood" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="specialConditions2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="bloqueadoOtraSede" Type="Int32" />
+          <Property Name="fechaEntregaReal" Type="DateTime" Precision="3" />
+          <Property Name="importeUF" Type="Double" />
+          <Property Name="codigoPedidoTobisa" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="IVA" Type="Double" />
+          <Property Name="zonaClientePago1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="codigoClientePago1" Type="Int32" />
+          <Property Name="codigoFacturaPago1" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="zonaClientePago2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="codigoClientePago2" Type="Int32" />
+          <Property Name="codigoFacturaPago2" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="zonaClientePago3" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="codigoClientePago3" Type="Int32" />
+          <Property Name="codigoFacturaPago3" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="origen" Type="Int32" />
+          <Property Name="noIncluirMontaje" Type="Boolean" />
+          <Property Name="pieAdjuntoModificado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="tipoClasificacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="importeInstalacion" Type="Double" />
+          <Property Name="siTeoWEB" Type="Boolean" />
+          <Property Name="administracion" Type="Int32" />
+          <Property Name="imprevistos" Type="Int32" />
+          <Property Name="utilidad" Type="Int32" />
+          <Property Name="siAIU" Type="Boolean" />
+          <Property Name="ivaAiu" Type="Double" />
+          <Property Name="factorAiu" Type="Double" />
+          <Property Name="motivoVariacion" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="observacionVariacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="presupuestoPadre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="soyVariacion" Type="Boolean" />
+          <Property Name="comentarioFechaEstimada" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="estadoVariacion" Type="Int32" />
+          <Property Name="motivoCancelacionVariacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="materialLento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="projectQty" Type="Int32" />
+          <Property Name="importeFijoCliente" Type="Double" />
+          <Property Name="EcoMobilierSometido" Type="Boolean" Nullable="false" />
+          <Property Name="EcoParticipationSometido" Type="Boolean" Nullable="false" />
+          <Property Name="TFASometido" Type="Boolean" Nullable="false" />
+          <Property Name="TVASometido" Type="Boolean" Nullable="false" />
+          <Property Name="tipoProyecto" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="codigoPorte" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="importeMinimoFranco" Type="Double" />
+          <Property Name="dtoPortes" Type="Double" />
+          <Property Name="codDescripcionDTO1" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="codDescripcionDTO2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="actualizarPDF" Type="Boolean" />
+          <Property Name="autoAceptar" Type="Boolean" />
+          <Property Name="Bloqueos" Type="Int32" Nullable="false" />
+          <Property Name="Estados" Type="Int32" Nullable="false" />
+          <Property Name="fechaEntregaDeseada" Type="DateTime" Precision="3" />
+          <Property Name="fechaExpedicion" Type="DateTime" Precision="3" />
+          <Property Name="idLineaProduccion" Type="Int32" />
+          <Property Name="reenviarMail" Type="Boolean" />
+          <Property Name="semanaEntrega" Type="Int32" />
+          <Property Name="idZonaEnvio" Type="Int32" />
+          <Property Name="anoTournee" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="contadorTournee" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="idZonaEnvioTournee" Type="Int32" />
+          <Property Name="tipoOrigen" Type="Int32" />
+          <Property Name="siAnulado" Type="Boolean" />
+          <Property Name="observacionesAnulado" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="codeReglement" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="codeConditionPaiement" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="TeoWinEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tpresupuesto" EntityType="Self.tpresupuesto" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TeoWinModelStoreContainer" CdmEntityContainer="TeoWinEntities">
+          <EntitySetMapping Name="tpresupuesto">
+            <EntityTypeMapping TypeName="TeoWinModel.tpresupuesto">
+              <MappingFragment StoreEntitySet="tpresupuesto">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="zonaCliente" ColumnName="zonaCliente" />
+                <ScalarProperty Name="codigoCliente" ColumnName="codigoCliente" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="fechaAlbaran" ColumnName="fechaAlbaran" />
+                <ScalarProperty Name="codigoAlbaran" ColumnName="codigoAlbaran" />
+                <ScalarProperty Name="fechaFactura" ColumnName="fechaFactura" />
+                <ScalarProperty Name="codigoFactura" ColumnName="codigoFactura" />
+                <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+                <ScalarProperty Name="coste" ColumnName="coste" />
+                <ScalarProperty Name="bruto" ColumnName="bruto" />
+                <ScalarProperty Name="baseImponible" ColumnName="baseImponible" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="fechaAceptado" ColumnName="fechaAceptado" />
+                <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+                <ScalarProperty Name="fechaPedidoCliente" ColumnName="fechaPedidoCliente" />
+                <ScalarProperty Name="codigoPedidoCliente" ColumnName="codigoPedidoCliente" />
+                <ScalarProperty Name="forma_pago" ColumnName="forma_pago" />
+                <ScalarProperty Name="tarifa" ColumnName="tarifa" />
+                <ScalarProperty Name="codigoModelo" ColumnName="codigoModelo" />
+                <ScalarProperty Name="tipoAplicacion" ColumnName="tipoAplicacion" />
+                <ScalarProperty Name="codigoAgente" ColumnName="codigoAgente" />
+                <ScalarProperty Name="zonaAgente" ColumnName="zonaAgente" />
+                <ScalarProperty Name="aviso" ColumnName="aviso" />
+                <ScalarProperty Name="obra" ColumnName="obra" />
+                <ScalarProperty Name="comision" ColumnName="comision" />
+                <ScalarProperty Name="observaciones2" ColumnName="observaciones2" />
+                <ScalarProperty Name="referencia" ColumnName="referencia" />
+                <ScalarProperty Name="operador" ColumnName="operador" />
+                <ScalarProperty Name="dtoPP" ColumnName="dtoPP" />
+                <ScalarProperty Name="recargoFinanciacion" ColumnName="recargoFinanciacion" />
+                <ScalarProperty Name="valorPunto" ColumnName="valorPunto" />
+                <ScalarProperty Name="ordenOptimizacion" ColumnName="ordenOptimizacion" />
+                <ScalarProperty Name="ordenEnOptimizacion" ColumnName="ordenEnOptimizacion" />
+                <ScalarProperty Name="empresa" ColumnName="empresa" />
+                <ScalarProperty Name="volumen" ColumnName="volumen" />
+                <ScalarProperty Name="brutoSinDescuento" ColumnName="brutoSinDescuento" />
+                <ScalarProperty Name="kg" ColumnName="kg" />
+                <ScalarProperty Name="numeroBultos" ColumnName="numeroBultos" />
+                <ScalarProperty Name="idArquitecto" ColumnName="idArquitecto" />
+                <ScalarProperty Name="costeAnadido" ColumnName="costeAnadido" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="versionContraPresupuesto" ColumnName="versionContraPresupuesto" />
+                <ScalarProperty Name="fechaAnulacion" ColumnName="fechaAnulacion" />
+                <ScalarProperty Name="brutoConDtoPartida" ColumnName="brutoConDtoPartida" />
+                <ScalarProperty Name="dtoGlobal" ColumnName="dtoGlobal" />
+                <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+                <ScalarProperty Name="moneda" ColumnName="moneda" />
+                <ScalarProperty Name="cambio" ColumnName="cambio" />
+                <ScalarProperty Name="porcentajeRecorte" ColumnName="porcentajeRecorte" />
+                <ScalarProperty Name="idObra" ColumnName="idObra" />
+                <ScalarProperty Name="modeloAnterior" ColumnName="modeloAnterior" />
+                <ScalarProperty Name="idClienteVarios" ColumnName="idClienteVarios" />
+                <ScalarProperty Name="transportista" ColumnName="transportista" />
+                <ScalarProperty Name="medioTransporte" ColumnName="medioTransporte" />
+                <ScalarProperty Name="impPorte" ColumnName="impPorte" />
+                <ScalarProperty Name="codigoPedidoProveedor" ColumnName="codigoPedidoProveedor" />
+                <ScalarProperty Name="numeroBultos1" ColumnName="numeroBultos1" />
+                <ScalarProperty Name="numeroBultos2" ColumnName="numeroBultos2" />
+                <ScalarProperty Name="cartaPresentacion" ColumnName="cartaPresentacion" />
+                <ScalarProperty Name="pieAdjunto" ColumnName="pieAdjunto" />
+                <ScalarProperty Name="porcentajeIncremento" ColumnName="porcentajeIncremento" />
+                <ScalarProperty Name="totalIncremento" ColumnName="totalIncremento" />
+                <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+                <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+                <ScalarProperty Name="tipoObra" ColumnName="tipoObra" />
+                <ScalarProperty Name="siTimbre" ColumnName="siTimbre" />
+                <ScalarProperty Name="confirmado" ColumnName="confirmado" />
+                <ScalarProperty Name="sucursal" ColumnName="sucursal" />
+                <ScalarProperty Name="idDireccionEnvio" ColumnName="idDireccionEnvio" />
+                <ScalarProperty Name="idDireccionEnvioFra" ColumnName="idDireccionEnvioFra" />
+                <ScalarProperty Name="idDireccionCobro" ColumnName="idDireccionCobro" />
+                <ScalarProperty Name="codigoCausal" ColumnName="codigoCausal" />
+                <ScalarProperty Name="codigoVigencia" ColumnName="codigoVigencia" />
+                <ScalarProperty Name="dtoGlobal2" ColumnName="dtoGlobal2" />
+                <ScalarProperty Name="idCatalogo" ColumnName="idCatalogo" />
+                <ScalarProperty Name="siOrigenObra" ColumnName="siOrigenObra" />
+                <ScalarProperty Name="tipoManoObra" ColumnName="tipoManoObra" />
+                <ScalarProperty Name="porcentajeRecorte2" ColumnName="porcentajeRecorte2" />
+                <ScalarProperty Name="porcenACosteParaVenta" ColumnName="porcenACosteParaVenta" />
+                <ScalarProperty Name="porcenACosteParaVenta2" ColumnName="porcenACosteParaVenta2" />
+                <ScalarProperty Name="tipoIncosur1" ColumnName="tipoIncosur1" />
+                <ScalarProperty Name="tipoIncosur2" ColumnName="tipoIncosur2" />
+                <ScalarProperty Name="codigoRechazo" ColumnName="codigoRechazo" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="siAgruparHerrajePorLinea" ColumnName="siAgruparHerrajePorLinea" />
+                <ScalarProperty Name="siETeowin" ColumnName="siETeowin" />
+                <ScalarProperty Name="fechaConfirmacion" ColumnName="fechaConfirmacion" />
+                <ScalarProperty Name="prioridad" ColumnName="prioridad" />
+                <ScalarProperty Name="siMontaje" ColumnName="siMontaje" />
+                <ScalarProperty Name="porcenCargoMontaje" ColumnName="porcenCargoMontaje" />
+                <ScalarProperty Name="cargoMinimoMontaje" ColumnName="cargoMinimoMontaje" />
+                <ScalarProperty Name="importeMontaje" ColumnName="importeMontaje" />
+                <ScalarProperty Name="usuarioAsignado" ColumnName="usuarioAsignado" />
+                <ScalarProperty Name="fechaAsignado" ColumnName="fechaAsignado" />
+                <ScalarProperty Name="siPerdido" ColumnName="siPerdido" />
+                <ScalarProperty Name="motivoPerdida" ColumnName="motivoPerdida" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="usuarioAceptadoDiseno" ColumnName="usuarioAceptadoDiseno" />
+                <ScalarProperty Name="fechaAceptadoDiseno" ColumnName="fechaAceptadoDiseno" />
+                <ScalarProperty Name="usuarioAceptadoPresup" ColumnName="usuarioAceptadoPresup" />
+                <ScalarProperty Name="usuarioAceptadoFabricacion" ColumnName="usuarioAceptadoFabricacion" />
+                <ScalarProperty Name="fechaAceptadoFabricacion" ColumnName="fechaAceptadoFabricacion" />
+                <ScalarProperty Name="fechaCaducidadAsignacion" ColumnName="fechaCaducidadAsignacion" />
+                <ScalarProperty Name="departamentoAsignado" ColumnName="departamentoAsignado" />
+                <ScalarProperty Name="measureUpDate" ColumnName="measureUpDate" />
+                <ScalarProperty Name="installDate" ColumnName="installDate" />
+                <ScalarProperty Name="ripOutRequired" ColumnName="ripOutRequired" />
+                <ScalarProperty Name="plumbingElectrical" ColumnName="plumbingElectrical" />
+                <ScalarProperty Name="fitter" ColumnName="fitter" />
+                <ScalarProperty Name="tap" ColumnName="tap" />
+                <ScalarProperty Name="sink" ColumnName="sink" />
+                <ScalarProperty Name="handle" ColumnName="handle" />
+                <ScalarProperty Name="importeVariaciones" ColumnName="importeVariaciones" />
+                <ScalarProperty Name="respetarTotalPresupuesto" ColumnName="respetarTotalPresupuesto" />
+                <ScalarProperty Name="siRespetarComision" ColumnName="siRespetarComision" />
+                <ScalarProperty Name="siVersionActiva" ColumnName="siVersionActiva" />
+                <ScalarProperty Name="specialConditions" ColumnName="specialConditions" />
+                <ScalarProperty Name="contractSignatureDate" ColumnName="contractSignatureDate" />
+                <ScalarProperty Name="variations" ColumnName="variations" />
+                <ScalarProperty Name="plumbing" ColumnName="plumbing" />
+                <ScalarProperty Name="carpentry" ColumnName="carpentry" />
+                <ScalarProperty Name="electrical" ColumnName="electrical" />
+                <ScalarProperty Name="floorPolishing" ColumnName="floorPolishing" />
+                <ScalarProperty Name="painters" ColumnName="painters" />
+                <ScalarProperty Name="plastering" ColumnName="plastering" />
+                <ScalarProperty Name="tiling" ColumnName="tiling" />
+                <ScalarProperty Name="additionalItemAmount" ColumnName="additionalItemAmount" />
+                <ScalarProperty Name="additionalItem" ColumnName="additionalItem" />
+                <ScalarProperty Name="actualPaymentDeposit" ColumnName="actualPaymentDeposit" />
+                <ScalarProperty Name="actualPaymentPreInstallation" ColumnName="actualPaymentPreInstallation" />
+                <ScalarProperty Name="actualPaymentPracticalCompletion" ColumnName="actualPaymentPracticalCompletion" />
+                <ScalarProperty Name="ordenCompra" ColumnName="ordenCompra" />
+                <ScalarProperty Name="BSA" ColumnName="BSA" />
+                <ScalarProperty Name="fechaMontaje" ColumnName="fechaMontaje" />
+                <ScalarProperty Name="horaMontaje" ColumnName="horaMontaje" />
+                <ScalarProperty Name="montador" ColumnName="montador" />
+                <ScalarProperty Name="fechaMedicion" ColumnName="fechaMedicion" />
+                <ScalarProperty Name="horaMedicion" ColumnName="horaMedicion" />
+                <ScalarProperty Name="medidor" ColumnName="medidor" />
+                <ScalarProperty Name="hotplate" ColumnName="hotplate" />
+                <ScalarProperty Name="oven" ColumnName="oven" />
+                <ScalarProperty Name="microwave" ColumnName="microwave" />
+                <ScalarProperty Name="dishwasher" ColumnName="dishwasher" />
+                <ScalarProperty Name="fridge" ColumnName="fridge" />
+                <ScalarProperty Name="headerTreatment" ColumnName="headerTreatment" />
+                <ScalarProperty Name="splashbackToBeMesaured" ColumnName="splashbackToBeMesaured" />
+                <ScalarProperty Name="sinks_basins" ColumnName="sinks_basins" />
+                <ScalarProperty Name="usuarioAceptadoIngenieria" ColumnName="usuarioAceptadoIngenieria" />
+                <ScalarProperty Name="fechaAceptadoIngenieria" ColumnName="fechaAceptadoIngenieria" />
+                <ScalarProperty Name="nomBDCopia" ColumnName="nomBDCopia" />
+                <ScalarProperty Name="porcentajeCosteIndirecto" ColumnName="porcentajeCosteIndirecto" />
+                <ScalarProperty Name="tipoPresupuesto" ColumnName="tipoPresupuesto" />
+                <ScalarProperty Name="materialLabour" ColumnName="materialLabour" />
+                <ScalarProperty Name="CustomerOrder" ColumnName="CustomerOrder" />
+                <ScalarProperty Name="rangehood" ColumnName="rangehood" />
+                <ScalarProperty Name="specialConditions2" ColumnName="specialConditions2" />
+                <ScalarProperty Name="bloqueadoOtraSede" ColumnName="bloqueadoOtraSede" />
+                <ScalarProperty Name="fechaEntregaReal" ColumnName="fechaEntregaReal" />
+                <ScalarProperty Name="importeUF" ColumnName="importeUF" />
+                <ScalarProperty Name="codigoPedidoTobisa" ColumnName="codigoPedidoTobisa" />
+                <ScalarProperty Name="IVA" ColumnName="IVA" />
+                <ScalarProperty Name="zonaClientePago1" ColumnName="zonaClientePago1" />
+                <ScalarProperty Name="codigoClientePago1" ColumnName="codigoClientePago1" />
+                <ScalarProperty Name="codigoFacturaPago1" ColumnName="codigoFacturaPago1" />
+                <ScalarProperty Name="zonaClientePago2" ColumnName="zonaClientePago2" />
+                <ScalarProperty Name="codigoClientePago2" ColumnName="codigoClientePago2" />
+                <ScalarProperty Name="codigoFacturaPago2" ColumnName="codigoFacturaPago2" />
+                <ScalarProperty Name="zonaClientePago3" ColumnName="zonaClientePago3" />
+                <ScalarProperty Name="codigoClientePago3" ColumnName="codigoClientePago3" />
+                <ScalarProperty Name="codigoFacturaPago3" ColumnName="codigoFacturaPago3" />
+                <ScalarProperty Name="origen" ColumnName="origen" />
+                <ScalarProperty Name="noIncluirMontaje" ColumnName="noIncluirMontaje" />
+                <ScalarProperty Name="pieAdjuntoModificado" ColumnName="pieAdjuntoModificado" />
+                <ScalarProperty Name="tipoClasificacion" ColumnName="tipoClasificacion" />
+                <ScalarProperty Name="importeInstalacion" ColumnName="importeInstalacion" />
+                <ScalarProperty Name="siTeoWEB" ColumnName="siTeoWEB" />
+                <ScalarProperty Name="administracion" ColumnName="administracion" />
+                <ScalarProperty Name="imprevistos" ColumnName="imprevistos" />
+                <ScalarProperty Name="utilidad" ColumnName="utilidad" />
+                <ScalarProperty Name="siAIU" ColumnName="siAIU" />
+                <ScalarProperty Name="ivaAiu" ColumnName="ivaAiu" />
+                <ScalarProperty Name="factorAiu" ColumnName="factorAiu" />
+                <ScalarProperty Name="motivoVariacion" ColumnName="motivoVariacion" />
+                <ScalarProperty Name="observacionVariacion" ColumnName="observacionVariacion" />
+                <ScalarProperty Name="presupuestoPadre" ColumnName="presupuestoPadre" />
+                <ScalarProperty Name="soyVariacion" ColumnName="soyVariacion" />
+                <ScalarProperty Name="comentarioFechaEstimada" ColumnName="comentarioFechaEstimada" />
+                <ScalarProperty Name="estadoVariacion" ColumnName="estadoVariacion" />
+                <ScalarProperty Name="motivoCancelacionVariacion" ColumnName="motivoCancelacionVariacion" />
+                <ScalarProperty Name="materialLento" ColumnName="materialLento" />
+                <ScalarProperty Name="projectQty" ColumnName="projectQty" />
+                <ScalarProperty Name="importeFijoCliente" ColumnName="importeFijoCliente" />
+                <ScalarProperty Name="EcoMobilierSometido" ColumnName="EcoMobilierSometido" />
+                <ScalarProperty Name="EcoParticipationSometido" ColumnName="EcoParticipationSometido" />
+                <ScalarProperty Name="TFASometido" ColumnName="TFASometido" />
+                <ScalarProperty Name="TVASometido" ColumnName="TVASometido" />
+                <ScalarProperty Name="tipoProyecto" ColumnName="tipoProyecto" />
+                <ScalarProperty Name="codigoPorte" ColumnName="codigoPorte" />
+                <ScalarProperty Name="importeMinimoFranco" ColumnName="importeMinimoFranco" />
+                <ScalarProperty Name="dtoPortes" ColumnName="dtoPortes" />
+                <ScalarProperty Name="codDescripcionDTO1" ColumnName="codDescripcionDTO1" />
+                <ScalarProperty Name="codDescripcionDTO2" ColumnName="codDescripcionDTO2" />
+                <ScalarProperty Name="actualizarPDF" ColumnName="actualizarPDF" />
+                <ScalarProperty Name="autoAceptar" ColumnName="autoAceptar" />
+                <ScalarProperty Name="Bloqueos" ColumnName="Bloqueos" />
+                <ScalarProperty Name="Estados" ColumnName="Estados" />
+                <ScalarProperty Name="fechaEntregaDeseada" ColumnName="fechaEntregaDeseada" />
+                <ScalarProperty Name="fechaExpedicion" ColumnName="fechaExpedicion" />
+                <ScalarProperty Name="idLineaProduccion" ColumnName="idLineaProduccion" />
+                <ScalarProperty Name="reenviarMail" ColumnName="reenviarMail" />
+                <ScalarProperty Name="semanaEntrega" ColumnName="semanaEntrega" />
+                <ScalarProperty Name="idZonaEnvio" ColumnName="idZonaEnvio" />
+                <ScalarProperty Name="anoTournee" ColumnName="anoTournee" />
+                <ScalarProperty Name="contadorTournee" ColumnName="contadorTournee" />
+                <ScalarProperty Name="idZonaEnvioTournee" ColumnName="idZonaEnvioTournee" />
+                <ScalarProperty Name="tipoOrigen" ColumnName="tipoOrigen" />
+                <ScalarProperty Name="siAnulado" ColumnName="siAnulado" />
+                <ScalarProperty Name="observacionesAnulado" ColumnName="observacionesAnulado" />
+                <ScalarProperty Name="codeReglement" ColumnName="codeReglement" />
+                <ScalarProperty Name="codeConditionPaiement" ColumnName="codeConditionPaiement" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

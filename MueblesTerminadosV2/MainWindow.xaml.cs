@@ -23,6 +23,12 @@ namespace MueblesTerminadosV2
         public MainWindow()
         {
             InitializeComponent();
+            var presupuesto = new TeoWinEntities();
+            var step1 = presupuesto.tpresupuesto.Where(p => p.observaciones == "URB088 MD");
+            var query = step1.FirstOrDefault<tpresupuesto>();
+
+            if (query != null) MessageBox.Show(query.codigo);
         }
+
     }
 }
