@@ -26,5 +26,6 @@ namespace MueblesTerminadosV2
         }
     
         public virtual DbSet<tpresupuesto> tpresupuesto { get; set; }
+        public virtual DbSet<tpresupuestoLineas> tpresupuestoLineas { get; set; }
     }
 }

@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="cf5a077bcc3045eb96b727b1848adbc7" Name="Diagram1">
         <EntityTypeShape EntityType="TeoWinModel.tpresupuesto" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeoWinModel.tpresupuestoLineas" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

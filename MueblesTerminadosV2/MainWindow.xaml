@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MueblesTerminadosV2"
         mc:Ignorable="d"
-        Title="Innovika | Muebles terminados" Height="350" Width="525">
+        Title="Innovika | Muebles terminados" Height="497" Width="649">
     <Grid>
-        <DatePicker Name="DiaInicio" Margin="10,10,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="185" />
-        <DatePicker Name="DiaFin" Margin="225,10,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="185" />
-        <DataGrid Name="MueblesDetalle" Margin="0,60,0,10" />
+        <DataGrid Name="MueblesDetalle" Margin="0,60,0,10" Grid.ColumnSpan="2" />
+        <Label x:Name="label" Content="Proyecto: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,29,0,0" FontWeight="Bold"/>
+        <Label x:Name="txtproject" Content="######" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="73,29,0,0"/>
+        <Button x:Name="btnSearch" Content="Buscar" HorizontalAlignment="Left" Margin="540,29,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="23" Margin="415,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Padding="0"/>
     </Grid>
 </Window>

@@ -18,14 +18,14 @@ namespace MueblesTerminadosV2
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
             InitializeComponent();
             var presupuesto = new TeoWinEntities();
             var step1 = presupuesto.tpresupuesto.Where(p => p.observaciones == "URB088 MD");
-            var query = step1.FirstOrDefault<tpresupuesto>();
+            var query = step1.FirstOrDefault();
 
             if (query != null) MessageBox.Show(query.codigo);
         }
